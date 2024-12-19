@@ -1,11 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['images.unsplash.com', 'plus.unsplash.com'],
   },
-  output: 'standalone',
+  output: 'export',
 };
 
 export default nextConfig;
