@@ -1,0 +1,25 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body styling */
+body {
+  background-color: #181818; /* Dark theme background */
+  color: #e5e7eb; /* Light text color */
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #6366f1; /* Indigo for headings */
+}
+
+a {
+  color: #10b981; /* Emerald Green */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #86efac; /* Lighter Green on hover */
+}
