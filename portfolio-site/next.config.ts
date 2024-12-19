@@ -1,9 +1,10 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['images.unsplash.com', 'plus.unsplash.com'],
   },
-  output: 'export',
+  output: 'export', // Enables static export
 };
 
-export default nextConfig;
+module.exports = nextConfig;
