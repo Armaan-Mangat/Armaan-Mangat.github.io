@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HobbiesPage() {
   return (
@@ -16,9 +17,11 @@ export default function HobbiesPage() {
       <section className="grid gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {/* Hobby 1 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
             alt="Weightlifting"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -31,24 +34,28 @@ export default function HobbiesPage() {
 
         {/* Hobby 2 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1663134285656-ea60684fa3bd?q=80&w=1967&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="https://plus.unsplash.com/premium_photo-1663134285656-ea60684fa3bd?q=80&w=1967&auto=format&fit=crop"
             alt="Swimming"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
             <h3 className="text-2xl font-semibold text-indigo-400">Swimming</h3>
             <p className="text-gray-400 mt-2">
-              Swimming helps me relax and stay active. It's a great full-body workout.
+              Swimming helps me relax and stay active. It&apos;s a great full-body workout.
             </p>
           </div>
         </div>
 
         {/* Hobby 3 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://images.unsplash.com/photo-1502224562085-639556652f33?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="https://images.unsplash.com/photo-1502224562085-639556652f33?q=80&w=2028&auto=format&fit=crop"
             alt="Running"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -61,9 +68,11 @@ export default function HobbiesPage() {
 
         {/* Hobby 4 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5?q=80&w=2070&auto=format&fit=crop"
             alt="Hiking"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -76,9 +85,11 @@ export default function HobbiesPage() {
 
         {/* Hobby 5 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1672281090607-a815894bcc69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGNsaW1iaW5nfGVufDB8fDB8fHww"
+          <Image
+            src="https://plus.unsplash.com/premium_photo-1672281090607-a815894bcc69?w=500&auto=format&fit=crop&q=60"
             alt="Climbing"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -91,9 +102,11 @@ export default function HobbiesPage() {
 
         {/* Hobby 6 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1675435646793-f6ceb239b064?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="https://plus.unsplash.com/premium_photo-1675435646793-f6ceb239b064?q=80&w=2070&auto=format&fit=crop"
             alt="Coffee"
+            width={800}
+            height={400}
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
@@ -104,6 +117,7 @@ export default function HobbiesPage() {
           </div>
         </div>
       </section>
+
       {/* Strava Button */}
       <div className="text-center mt-12">
         <a
