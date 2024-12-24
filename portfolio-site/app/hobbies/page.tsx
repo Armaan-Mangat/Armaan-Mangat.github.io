@@ -18,7 +18,7 @@ export default function HobbiesPage() {
         {/* Hobby 1 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
+            src="/images/weightlifting.jpg"
             alt="Weightlifting"
             width={800}
             height={400}
@@ -35,7 +35,7 @@ export default function HobbiesPage() {
         {/* Hobby 2 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://plus.unsplash.com/premium_photo-1663134285656-ea60684fa3bd?q=80&w=1967&auto=format&fit=crop"
+            src="/images/swimming.jpg"
             alt="Swimming"
             width={800}
             height={400}
@@ -52,7 +52,7 @@ export default function HobbiesPage() {
         {/* Hobby 3 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://images.unsplash.com/photo-1502224562085-639556652f33?q=80&w=2028&auto=format&fit=crop"
+            src="/images/running.jpg"
             alt="Running"
             width={800}
             height={400}
@@ -69,7 +69,7 @@ export default function HobbiesPage() {
         {/* Hobby 4 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5?q=80&w=2070&auto=format&fit=crop"
+            src="/images/hiking.jpg"
             alt="Hiking"
             width={800}
             height={400}
@@ -86,7 +86,7 @@ export default function HobbiesPage() {
         {/* Hobby 5 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://plus.unsplash.com/premium_photo-1672281090607-a815894bcc69?w=500&auto=format&fit=crop&q=60"
+            src="/images/climbing.jpg"
             alt="Climbing"
             width={800}
             height={400}
@@ -103,7 +103,7 @@ export default function HobbiesPage() {
         {/* Hobby 6 */}
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
           <Image
-            src="https://plus.unsplash.com/premium_photo-1675435646793-f6ceb239b064?q=80&w=2070&auto=format&fit=crop"
+            src="/images/coffee.jpg"
             alt="Coffee"
             width={800}
             height={400}
