@@ -1,19 +1,17 @@
-import type { Config } from "tailwindcss";
+const colors = require('tailwindcss/colors');
 
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    './styles/**/*.{js,ts,jsx,tsx}', // Include styles directory if used
-  ],
+module.exports = {
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        onyx: '#403F4C',
+        raisin: '#2C2B3C',
+        gunmetal: '#1B2432',
+        richblack: '#121420',
+        indianred: '#B76D68',
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
