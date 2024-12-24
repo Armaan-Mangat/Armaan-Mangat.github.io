@@ -1,8 +1,26 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+  const [tracks, setTracks] = useState([]);
+
+  // Fetch Last.fm data from the Worker
+  useEffect(() => {
+    const fetchTracks = async () => {
+      try {
+        const response = await fetch('https://lastfm-worker.armaanm1010.workers.dev/');
+        const data = await response.json();
+        setTracks(data.recenttracks.track.slice(0, 5)); // Limit to 5 tracks
+      } catch (error) {
+        console.error('Error fetching Last.fm tracks:', error);
+      }
+    };
+
+    fetchTracks();
+  }, []);
+
   return (
     <main className="bg-richblack text-gray-200 min-h-screen flex flex-col">
       {/* Hero Section */}
@@ -13,6 +31,31 @@ export default function HomePage() {
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
           A showcase of my projects, skills, and experiences. Let’s create something extraordinary together.
         </p>
+      </section>
+
+      {/* Last.fm Widget */}
+      <section className="text-center py-10 bg-gunmetal rounded-lg mx-6 mb-8 shadow-lg">
+        <h3 className="text-2xl font-semibold text-indianred mb-4">
+          Recently Listened Tracks
+        </h3>
+        {tracks.length > 0 ? (
+          <ul className="space-y-3">
+            {tracks.map((track: any, index) => (
+              <li key={index} className="text-gray-300">
+                <a
+                  href={track.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-indianred transition"
+                >
+                  {track.name} - {track.artist['#text']}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-gray-400">Loading recent tracks...</p>
+        )}
       </section>
 
       {/* Navigation Cards */}
