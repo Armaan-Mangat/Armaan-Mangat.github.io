@@ -19,7 +19,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchTracks = async () => {
       try {
-        const response = await fetch('https://lastfm-worker.yourdomain.workers.dev/');
+        const response = await fetch('https://lastfm-worker.armaanm1010.workers.dev/');
         const data = await response.json();
         setTracks(data.recenttracks.track.slice(0, 5)); // Limit to 5 tracks
       } catch (error) {
