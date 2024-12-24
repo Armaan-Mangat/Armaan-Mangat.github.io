@@ -1,20 +1,32 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+// Define the type for a single track
+interface Track {
+  name: string;
+  artist: {
+    '#text': string;
+  };
+  url: string;
+}
 
 export default function HomePage() {
-  const [tracks, setTracks] = useState([]);
+  const [tracks, setTracks] = useState<Track[]>([]);
 
-  // Fetch Last.fm data from the Worker
+  // Fetch Last.fm recent tracks data
   useEffect(() => {
     const fetchTracks = async () => {
       try {
-        const response = await fetch('https://lastfm-worker.armaanm1010.workers.dev/');
+        const response = await fetch('https://lastfm-worker.yourdomain.workers.dev/');
         const data = await response.json();
         setTracks(data.recenttracks.track.slice(0, 5)); // Limit to 5 tracks
       } catch (error) {
-        console.error('Error fetching Last.fm tracks:', error);
+        console.error(
+          'Error fetching Last.fm tracks:',
+          error instanceof Error ? error.message : 'Unknown error occurred'
+        );
       }
     };
 
@@ -35,12 +47,10 @@ export default function HomePage() {
 
       {/* Last.fm Widget */}
       <section className="text-center py-10 bg-gunmetal rounded-lg mx-6 mb-8 shadow-lg">
-        <h3 className="text-2xl font-semibold text-indianred mb-4">
-          Recently Listened Tracks
-        </h3>
+        <h3 className="text-2xl font-semibold text-indianred mb-4">Recently Listened Tracks</h3>
         {tracks.length > 0 ? (
           <ul className="space-y-3">
-            {tracks.map((track: any, index) => (
+            {tracks.map((track, index) => (
               <li key={index} className="text-gray-300">
                 <a
                   href={track.url}
